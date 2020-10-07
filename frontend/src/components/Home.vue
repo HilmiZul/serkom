@@ -14,6 +14,7 @@
                 <th>JUDUL</th>
                 <th>PENULIS</th>
                 <th>KELOMPOK</th>
+                <th>LOKASI</th>
                 <th>JUMLAH</th>
               </tr>
             </thead>
@@ -24,6 +25,7 @@
                 <td>{{ buku.judul }}</td>
                 <td>{{ buku.penulis }}</td>
                 <td>{{ buku.kelompok }}</td>
+                <td>{{ buku.lokasi }}</td>
                 <td>{{ buku.jumlah }}</td>
               </tr>
             </tbody>
@@ -61,7 +63,8 @@ export default {
         return (
           b.judul.toLowerCase().includes(this.cari.toLowerCase()) ||
           b.penulis.toLowerCase().includes(this.cari.toLowerCase()) ||
-          b.kelompok.toLowerCase().includes(this.cari.toLowerCase())
+          b.kelompok.toLowerCase().includes(this.cari.toLowerCase()) ||
+          b.lokasi.toLowerCase().includes(this.cari.toLowerCase())
         )
       })
     }
